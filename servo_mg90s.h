@@ -1,17 +1,17 @@
-#ifndef __servo_mg_90s__
-#define __servo_mg_90s__
+#ifndef __servo_mg90s__
+#define __servo_mg90s__
 
 #include <xglob.h>
 #include <xlog.h>
 #include <zephyr/drivers/pwm.h>
 
-#define SERVO_FREQ_MSEC 10
-#define SERVO_FREQ PWM_MSEC(SERVO_FREQ_MSEC)
-#define SERVO_TIMER_TICKS(n) K_MSEC(n *SERVO_FREQ_MSEC)
+#define SERVO_MG90S_FREQ_MSEC 10
+#define SERVO_MG90S_FREQ PWM_MSEC(SERVO_MG90S_FREQ_MSEC)
+#define SERVO_MG90S_TIMER_TICKS(n) K_MSEC(n *SERVO_MG90S_FREQ_MSEC)
 
-#define SERVO_POS_0 PWM_USEC(1500)
-#define SERVO_CW PWM_USEC(1000)
-#define SERVO_CCW PWM_USEC(2000)
+#define SERVO_MG90S_POS_0 PWM_USEC(1500)
+#define SERVO_MG90S_CW PWM_USEC(1000)
+#define SERVO_MG90S_CCW PWM_USEC(2000)
 
 typedef struct
 {
